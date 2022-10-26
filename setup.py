@@ -5,6 +5,7 @@ from typing import List
 
 def get_requirements()->List[str]:
     requirement_list:List[str] = []
+    
     return requirement_list
     
 

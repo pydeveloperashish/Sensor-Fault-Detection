@@ -1,2 +1,2 @@
-pymongo==4.2.0
+pymongo[srv]==4.2.0  # srv to connect mongodb
 -e .

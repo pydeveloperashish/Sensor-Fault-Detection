@@ -1,2 +1,3 @@
-DATABASE_NAME = "developer_ashish"
+DATABASE_NAME = "sensors-fault-detection"
+COLLECTION_NAME = "myFirstCollection"
 

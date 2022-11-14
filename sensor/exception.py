@@ -6,14 +6,14 @@ def error_message_detail(error, error_detail : sys):
     
     file_name = exc_tb.tb_frame.f_code.co_filename
     
-    error_message = "Error occured python script name [0] line number [{1}] error message [{2}]".format(
+    error_message = "Error occured python script name [{0}] line number [{1}] error message [{2}]".format(
     file_name, exc_tb.tb_lineno, str(error)
-    )
+        )
     return error_message
 
 
 
-class SensorExecption(Exception):
+class SensorException(Exception):
     def __init__(self, error_message, error_detail):
         """
         :param error message: error message in string format

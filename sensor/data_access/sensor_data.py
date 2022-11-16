@@ -1,6 +1,6 @@
 from sensor.exception import SensorExecption
 from sensor.logger import logging
-from sensor.config.mongo_db_connection import MongoDBClient
+from sensor.configuration.mongo_db_connection import MongoDBClient
 from sensor.constant.database import DATABASE_NAME
 import os
 import sys

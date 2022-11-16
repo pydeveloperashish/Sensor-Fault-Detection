@@ -1,4 +1,4 @@
-from sensor.config.mongo_db_connection import MongoDBClient
+from sensor.configuration.mongo_db_connection import MongoDBClient
 from sensor.entity.config_entity import TrainingPipelineConfig, DataIngestionConfig
 from sensor.pipeline.training_pipeline import TrainPipeline
 from sensor.exception import SensorException

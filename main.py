@@ -7,7 +7,9 @@ import os
 import sys
 
 
-
 if __name__ == '__main__':
-    train_pipeline = TrainPipeline()
-    train_pipeline.run_pipeline()
+    try:
+        train_pipeline = TrainPipeline()
+        train_pipeline.run_pipeline()
+    except Exception as e:
+        logging.exception(e)

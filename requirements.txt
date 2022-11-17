@@ -1,4 +1,8 @@
 pymongo[srv]==4.2.0  # srv to connect mongodb
 from-root
 scikit-learn==1.1.3
+PyYaml
+imblearn
+dill
+scipy
 -e .

@@ -12,6 +12,7 @@ from sensor.constant.training_pipeline import TARGET_COLUMN
 from sensor.ml.model.estimator import TargetValueMapping
 import pandas  as  pd
 
+
 class ModelEvaluation:
     def __init__(self,model_eval_config : ModelEvaluationConfig,
                     data_validation_artifact : DataValidationArtifact,
@@ -89,6 +90,7 @@ class ModelEvaluation:
             #save the report
             write_yaml_file(self.model_eval_config.report_file_path, model_eval_report)
             logging.info(f"Model evaluation artifact: {model_evaluation_artifact}")
+            
             return model_evaluation_artifact
             
         except Exception as e:

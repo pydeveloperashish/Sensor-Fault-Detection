@@ -34,7 +34,7 @@ class SensorModel:
         
 
 class ModelResolver:
-    def __init__(self, model_dir):
+    def __init__(self, model_dir = SAVED_MODEL_DIR):
         try:
             self.model_dir = model_dir
         except Exception as e:

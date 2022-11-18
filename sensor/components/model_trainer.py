@@ -13,7 +13,7 @@ class ModelTrainer:
                  data_transformation_artifact : DataTransformationArtifact):
         try:
             self.model_trainer_config = model_trainer_config
-            self.data_transformations_artifact = data_transformation_artifact
+            self.data_transformation_artifact = data_transformation_artifact
         except Exception as e:
             raise SensorException(e, sys)
         
@@ -34,8 +34,8 @@ class ModelTrainer:
         
     def initiate_model_trainer(self) -> ModelTrainerArtifact:
         try:
-            train_file_path = self.data_transformations_artifact.transformed_train_file_path
-            test_file_path = self.data_transformations_artifact.transformed_test_file_path
+            train_file_path = self.data_transformation_artifact.transformed_train_file_path
+            test_file_path = self.data_transformation_artifact.transformed_test_file_path
             
             # loading training array and testing array
             train_arr = load_numpy_array_data(train_file_path)
@@ -52,8 +52,7 @@ class ModelTrainer:
             model = self.train_model(x_train, y_train)
             
             y_train_pred = model.predict(x_train)
-            classification_train_metric = get_classification_score
-            (
+            classification_train_metric = get_classification_score(
                 y_true = y_train, 
                 y_pred = y_train_pred
                 )
@@ -72,7 +71,7 @@ class ModelTrainer:
             if diff > self.model_trainer_config.overfitting_underfitting_threshold:  
                 raise Exception("Model is not good, try to do more Experimentation.")
             
-            preprocessor = load_object(file_path = self.data_transformations_artifact.transformed_object_file_path)
+            preprocessor = load_object(file_path = self.data_transformation_artifact.transformed_object_file_path)
             
             model_dir_path = os.path.dirname(self.model_trainer_config.trained_model_file_path)
             os.makedirs(model_dir_path, exist_ok = True)
@@ -89,6 +88,7 @@ class ModelTrainer:
             
             logging.info(f"Model trainer artifact: {model_trainer_artifact}")
             
+            return model_trainer_artifact
             
             
             

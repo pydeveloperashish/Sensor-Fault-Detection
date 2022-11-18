@@ -73,3 +73,10 @@ MODEL_EVALUATION_DIR_NAME : str = "model_evaluation"
 MODEL_EVALUATION_REPORT_NAME : str = "report.yaml"
 
 
+
+"""
+Model Pusher related constants starts with MODEL_PUSHER VAR NAME
+"""
+
+MODEL_PUSHER_DIR_NAME = "model_pusher"
+MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR

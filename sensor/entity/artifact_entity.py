@@ -30,11 +30,13 @@ class ClassificationMetricArtifact:
     precision_score : float
     recall_score : float
 
+
 @dataclass
 class ModelTrainerArtifact:
     trained_model_file_path : str
     train_metric_artifact : ClassificationMetricArtifact
     test_metric_artifact : ClassificationMetricArtifact
+    
     
     
 @dataclass
@@ -45,4 +47,11 @@ class ModelEvaluationArtifact:
     trained_model_path : str 
     trained_model_metric_artifact : ClassificationMetricArtifact
     best_model_metric_artifact : ClassificationMetricArtifact
+    
+    
+    
+@dataclass
+class ModelPusherArtifact:
+    saved_model_path : str
+    model_file_path : str
     

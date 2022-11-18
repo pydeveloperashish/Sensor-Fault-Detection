@@ -18,6 +18,8 @@ class DataIngestion:
         except Exception as e:
             raise SensorException(e,sys)
 
+
+
     def export_data_into_feature_store(self) -> DataFrame:
         """
         Export mongo db collection record as data frame into feature
@@ -35,6 +37,8 @@ class DataIngestion:
             return dataframe
         except  Exception as e:
             raise  SensorException(e,sys)
+        
+        
 
     def split_data_as_train_test(self, dataframe: DataFrame) -> None:
         """

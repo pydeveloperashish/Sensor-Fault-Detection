@@ -28,9 +28,9 @@ class ModelPusher:
             SensorException(e, sys)
             
         
-    def initiate_model_pusher(self,) -> ModelPusherArtifact:
+    def initiate_model_pusher(self) -> ModelPusherArtifact:
         try:
-            trained_model_path = self.model_eval_artifact.train_model_file_path
+            trained_model_path = self.model_eval_artifact.trained_model_path
             
             # Creating model pusher dir to save model
             model_file_path = self.model_pusher_config.model_file_path

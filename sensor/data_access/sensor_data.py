@@ -19,7 +19,7 @@ class SensorData:
         try:
             self.mongo_client = MongoDBClient(database_name = DATABASE_NAME)
         except Exception as e:
-            raise SensorExecption(e, sys)
+            raise SensorException(e, sys)
         
     def export_collection_as_dataframe(
         self, collection_name : str, 
@@ -42,6 +42,6 @@ class SensorData:
             return df
         
         except Exception as e:
-            raise SensorExecption(e, sys)
+            raise SensorException(e, sys)
         
     

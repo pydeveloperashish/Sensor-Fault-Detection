@@ -42,7 +42,7 @@ class ModelResolver:
         
     def get_best_model_path(self) -> str:
         try:
-            timestamps = list(map(int, os.listdir(self.model_dir)))
+            timestamps = list(os.listdir(SAVED_MODEL_DIR))
             latest_timestamp = max(timestamps)
             latest_model_path = os.path.join(
                     self.model_dir, f"{latest_timestamp}", MODEL_FILE_NAME
@@ -56,17 +56,17 @@ class ModelResolver:
         try:
             if not os.path.exists(self.model_dir):
                 return False
-            
+
             timestamps = os.listdir(self.model_dir)
             if len(timestamps) == 0:
                 return False
             
             latest_model_path = self.get_best_model_path()
-            if os.path.exists(latest_model_path):
+
+            if not os.path.exists(latest_model_path):
                 return False
-            
+
             return True
-        
         except Exception as e:
             raise e
         

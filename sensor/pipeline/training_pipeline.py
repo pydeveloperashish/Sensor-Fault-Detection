@@ -161,6 +161,7 @@ class TrainPipeline:
                     data_validation_artifact, model_trainer_artifact
                     )
             if not model_eval_artifact.is_model_accepted:
+                logging.exception("Trained model is not better than best model.")
                 raise Exception("Trained model is not better than best model.")
             
             model_pusher_artifact = self.start_model_pusher(model_eval_artifact)
@@ -168,7 +169,8 @@ class TrainPipeline:
             
             self.sync_artifact_dir_to_s3()
             self.sync_saved_model_dir_to_s3() 
-                     
+            #logging.info("Artifacts and Saved model dir stored in S3 Bucket")  
+                   
         except  Exception as e:
             self.sync_artifact_dir_to_s3()
             TrainPipeline.is_pipeline_running = False

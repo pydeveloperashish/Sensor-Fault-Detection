@@ -3,7 +3,7 @@ RUN apt update -y && apt install awscli -y
 WORKDIR /app
 
 COPY . /app
-RUN sudo apt-get install gcc
+RUN apt install gcc -y
 RUN pip3 install -r requirements.txt
 
 CMD ["python3", "main.py"]

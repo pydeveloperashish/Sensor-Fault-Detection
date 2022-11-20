@@ -48,6 +48,7 @@ class ModelPusher:
                 model_file_path = model_file_path
                 )
             
+            logging.info(f"Model Pusher Artifact {model_pusher_artifact}")
             return model_pusher_artifact
             
         except Exception as e:

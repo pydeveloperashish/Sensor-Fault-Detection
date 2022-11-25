@@ -114,3 +114,18 @@ docker build -t sensor .
 ```
 docker run -d -e AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}" -e AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}" -e AWS_DEFAULT_REGION="${{ secrets.AWS_DEFAULT_REGION }}" -e MONGODB_URL="${{ secrets.MONGODB_URL }}" -p 8080:8080 sensor
 ```
+
+
+
+![Screenshot from 2022-11-25 18-43-41](https://user-images.githubusercontent.com/59412013/203995120-6cffc710-f6d9-4ae0-b300-46a250376c45.png)
+![Screenshot from 2022-11-25 18-50-29](https://user-images.githubusercontent.com/59412013/203995123-98f638ae-5bdb-4166-884e-81f74dc08ef1.png)
+![Screenshot from 2022-11-25 18-48-00](https://user-images.githubusercontent.com/59412013/203995128-6e85b1a0-1684-4582-8b6a-6c22932674bc.png)
+![Screenshot from 2022-11-25 18-47-54](https://user-images.githubusercontent.com/59412013/203995130-e54bf9f7-248a-4845-911c-5eeac97541d2.png)
+![Screenshot from 2022-11-25 18-45-52](https://user-images.githubusercontent.com/59412013/203995133-b2bc60c8-dcf5-4ba2-a3d3-50224d667636.png)
+![Screenshot from 2022-11-25 18-45-31](https://user-images.githubusercontent.com/59412013/203995134-d7c66826-5553-4fd3-b898-40cab15e154e.png)
+![Screenshot from 2022-11-25 18-45-27](https://user-images.githubusercontent.com/59412013/203995137-f541e710-0840-44d3-af9a-e256f5b2181b.png)
+![Screenshot from 2022-11-25 18-45-17](https://user-images.githubusercontent.com/59412013/203995139-ab931d2a-82c2-45e5-9d57-7f509a8bb300.png)
+![Screenshot from 2022-11-25 18-44-43](https://user-images.githubusercontent.com/59412013/203995143-c85f1a75-6a1f-457e-a53d-db30c017fcfc.png)
+![Screenshot from 2022-11-25 18-44-30](https://user-images.githubusercontent.com/59412013/203995147-4cb08a13-6298-47a4-a321-f13b56997e0f.png)
+![Screenshot from 2022-11-25 18-44-21](https://user-images.githubusercontent.com/59412013/203995151-413ec0c8-2056-403e-9554-4ba460b042f6.png)
+![Screenshot from 2022-11-25 18-43-55](https://user-images.githubusercontent.com/59412013/203995152-9b69c7fa-9f44-40b4-be71-8d1214110208.png)
